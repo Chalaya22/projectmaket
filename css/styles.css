@@ -1,15 +1,9 @@
+/* опис ЗАГАЛЬНИЙ */
 body {
   background-color: #ffffff;
   font-family: 'Montserrat', sans-serif;
 }
-/* :root {
-  --main-font-family: 'Roboto', sans-serif;
-  --secondary-font-family: 'Raleway', sans-serif;
-  --accent-color: #4d5ae5;
-  --accent-color-second: #404bbf;
-  --accent-background-color: #2e2f42;
-} */
-/* всі зображення повині бути блоковими */
+
 img {
   display: block;
   max-width: 100%;
@@ -38,50 +32,44 @@ ol {
   margin-bottom: 0;
   margin-left: 0;
 }
-
-@media screen and (min-width: 428px) {
-  /* .container {
-    max-width: 428px;
+/* опис МОБІЛЬНОІ ВЕРСІІ */
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media screen and (min-width: 375px) {
+  .container {
+    max-width: 320px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 16px;
-    padding-right: 16px;
-  } */
-}
-@media screen and (min-width: 767px) {
-  /* .container {
-    max-width: 767px;
-  } */
-  /* .mobile-menu-open-btn {
-    display: none;
-  } */
-}
-@media screen and (min-width: 1158px) {
-  /* .container {
-    max-width: 1158px;
-    padding-left: 15px;
-    padding-right: 15px;
-  } */
-}
+  }
+  .unique-container {
+    margin: 0 auto;
+    padding-bottom: 128px;
+  }
+  .unique-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 19px;
+  }
 
-/* опис МОБІЛЬНОІ ВЕРСІІ */
-.unique-container {
-  margin: 0 auto;
-  padding-left: 32px;
-  padding-right: 32px;
-  padding-bottom: 128px;
+  .unique-header {
+    max-width: 283px;
+    max-height: 72px;
+  }
 }
 .unique-header {
   font-family: 'Montserrat';
   font-weight: 600;
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 20px;
+  line-height: 24px;
   text-align: center;
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: #111111;
-  width: 411px;
-  height: 56px;
+
   margin: 0 auto;
   margin-bottom: 28px;
 }
@@ -89,8 +77,6 @@ ol {
   color: #fd9222;
 }
 .unique-paragraf {
-  width: 486px;
-  height: 72px;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
@@ -101,15 +87,11 @@ ol {
   color: #111111;
   margin: 0 auto;
   margin-bottom: 50px;
+  max-width: 335px;
+  max-height: 108px;
 }
-.unique-list {
-  display: flex;
-  justify-content: center;
-  gap: 19px;
-}
-
 .unique-overlay-img-wrapper-chocolate {
-  width: 270px;
+  width: 335px;
   height: 270px;
   background: #fd9222;
   border-radius: 15px;
@@ -118,7 +100,7 @@ ol {
   overflow: hidden;
 }
 .unique-overlay-img-wrapper-milk {
-  width: 270px;
+  width: 335px;
   height: 270px;
   background: #ffffff;
   border: 1px solid #fd9222;
@@ -128,7 +110,7 @@ ol {
   overflow: hidden;
 }
 .unique-overlay-img-wrapper-nuts {
-  width: 270px;
+  width: 335px;
   height: 270px;
   background: #1e1823;
   border-radius: 15px;
@@ -137,7 +119,7 @@ ol {
   overflow: hidden;
 }
 .unique-overlay-img-wrapper-semi {
-  width: 270px;
+  width: 335px;
   height: 270px;
   background: #ffffff;
   border: 1px solid #fd9222;
@@ -242,5 +224,61 @@ ol {
   color: #111111;
 }
 /* oпис ПЛАНШЕТНОІ ВЕРСІІ */
+@media screen and (min-width: 767px) {
+  .container {
+    max-width: 767px;
+  }
+  .unique-container {
+    margin: 0 auto;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media screen and (min-width: 767px) {
+  .unique-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 32px 32px;
+  }
+  .unique-paragraf {
+    max-width: 486px;
+    max-height: 72px;
+  }
+  .unique-header {
+    font-size: 24px;
+    line-height: 28px;
+    max-width: 411px;
+    max-height: 56px;
+  }
+}
 
 /* опис ДЕСКТОПУ */
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .unique-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 19px;
+  }
+  .unique-overlay-img-wrapper-chocolate {
+    width: 270px;
+  }
+  .unique-overlay-img-wrapper-milk {
+    width: 270px;
+  }
+  .unique-overlay-img-wrapper-nuts {
+    width: 270px;
+  }
+  .unique-overlay-img-wrapper-semi {
+    width: 270px;
+  }
+}
